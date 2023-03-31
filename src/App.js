@@ -1,19 +1,23 @@
 import logo from './logo.svg';
-import './App.css';
+import './assets/scss/App.scss';
 import Album from './components/Album.js';
 
 function App() {
-  const sampleData = [
+  const albums = [
     {
-      id: 'recxHvVai51GUBmd1',
-      album: 'album title',
+      title: 'album title',
+      artist: 'name',
       year: '2023',
+      role: 'role',
+      img_path: 'image.jpg',
       link: 'bandcamp.com/song',
     },
     {
-      id: 'recxHvVai51GUBmd2',
-      album: 'album title',
+      title: 'album title',
+      artist: 'name',
+      role: 'role',
       year: '2022',
+      img_path: 'image.jpg',
       link: 'bandcamp.com/song',
     },
   ];
@@ -23,17 +27,9 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>North Room Records</p>
-        {sampleData.map((album, index) => (
+        {albums.map((album, index) => (
           <Album key={index} album={album} />
         ))}
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
     </div>
   );
