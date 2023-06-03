@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './assets/scss/App.scss';
 import Album from './components/Album.js';
 
@@ -84,17 +83,24 @@ function App() {
         {/* <div className="sidebar__content"> */}
         {/* logo */} <h1>North Room Records</h1>
         <nav className="menu">
-          <a href="#albums">Discography</a>
+          <a href="#discography">Discography</a>
           <a href="#about">About</a>
           <div className="social-icons">
-            {/* email */}
-            {/* instagram */}
+            <div className="icon">
+              <img
+                src={process.env.PUBLIC_URL + '/assets/instagram.png'}
+                alt=""
+              />
+            </div>
+            <div className="icon">
+              <img src={process.env.PUBLIC_URL + '/assets/email.png'} alt="" />
+            </div>
           </div>
         </nav>
         {/* </div> */}
       </header>
 
-      <div id="albums" className="albums">
+      <div id="discography" className="albums">
         {albums.map((album, index) => (
           <Album key={index} album={album} />
         ))}
