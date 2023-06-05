@@ -6,7 +6,7 @@ const About = () => {
       <img
         className="about__img"
         src="https://placehold.co/600x400"
-        alt="photo of Rob and Packie"
+        alt="Rob and Packie"
       />
 
       <div className="about__content">
