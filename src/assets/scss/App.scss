@@ -53,7 +53,7 @@ a {
   text-align: center;
   display: flex;
   flex-direction: column;
-  a {
+  &__item {
     margin-top: 1rem;
   }
 }
@@ -63,20 +63,20 @@ a {
   display: flex;
   justify-content: center;
   .icon {
-    margin: 0.5rem;
-    position: relative;
-    width: 35px;
-    height: 35px;
-    border-radius: 100%;
-    background: rgb(227, 227, 227);
+    margin: 0.75rem;
+    // position: relative;
+    // width: 35px;
+    // height: 35px;
+    // border-radius: 100%;
+    // background: rgb(227, 227, 227);
   }
   img {
-    width: 18px;
-    height: 18px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    // position: absolute;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
   }
 }
 

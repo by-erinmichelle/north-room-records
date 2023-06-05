@@ -6,18 +6,30 @@ const Sidebar = () => {
       {/* <div className="sidebar__content"> */}
       {/* logo */} <h1>North Room Records</h1>
       <nav className="menu">
-        <a href="#discography">Discography</a>
-        <a href="#about">About</a>
+        <a className="menu__item" href="#discography">
+          Discography
+        </a>
+        <a className="menu__item" href="#about">
+          About
+        </a>
+
         <div className="social-icons">
-          <div className="icon">
-            <img
-              src={process.env.PUBLIC_URL + '/assets/instagram.png'}
-              alt=""
-            />
-          </div>
-          <div className="icon">
-            <img src={process.env.PUBLIC_URL + '/assets/email.png'} alt="" />
-          </div>
+          <a href="instagram.com">
+            <div className="icon">
+              <img
+                src={process.env.PUBLIC_URL + '/assets/instagram.png'}
+                alt=""
+              />
+            </div>
+          </a>
+          <a href="mailto:">
+            <div className="icon">
+              <img
+                src={process.env.PUBLIC_URL + '/assets/email.png'}
+                alt="email icon"
+              />
+            </div>
+          </a>
         </div>
       </nav>
       {/* </div> */}
