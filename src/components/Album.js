@@ -1,17 +1,28 @@
 import React from 'react';
 
 const Album = ({ album }) => {
-  const { title, artist, role, year, link, img_path } = album;
+  const { title, artist, role, display_year, link, image } = album;
 
   return (
-    <a href={link} className="album__link-wrapper">
+    <a
+      href={link}
+      target="_blank"
+      rel="noreferrer"
+      className="album__link-wrapper"
+    >
       <div className="album">
-        <img src={img_path} alt={title} />
-        <h4 className="artist">{artist}</h4>
-        <h4 className="title">{title}</h4>
+        <img
+          src={process.env.PUBLIC_URL + '/assets/artwork/' + image}
+          alt={title}
+        />
+        <h5 className="album__artist-title">
+          {artist} – {title}
+        </h5>
 
-        <p className="role">{role}</p>
-        <p className="year">{year}</p>
+        <div className="album__info">
+          <p className="role">{role}</p>
+          <p className="year">{display_year}</p>
+        </div>
       </div>
     </a>
   );

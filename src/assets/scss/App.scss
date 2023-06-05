@@ -1,38 +1,162 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: 'Geologica', Arial, sans-serif;
+}
+
 .App {
-  text-align: center;
-}
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 1fr auto;
+  padding: 2rem 0 6rem;
+  grid-template-areas: 'sidebar' 'albums' 'about';
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  @media screen and (min-width: 768px) {
+    grid-template-columns: 250px auto;
+    grid-template-rows: auto;
+    grid-template-areas: 'sidebar albums' 'sidebar about';
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 400;
+}
+
+h5 {
+  font-size: 0.85rem;
+}
+
+p {
+  font-size: 0.75rem;
+  margin: 0.125rem 0;
+  font-weight: 100;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+///////////////////////////
+// SIDEBAR ///////////////////////////
+///////////////////////////
+
+.sidebar {
+  grid-area: sidebar;
+  width: 100%;
+  top: 0;
+  left: 0;
+  text-align: center;
+  margin-bottom: 4rem;
+
+  @media screen and (min-width: 768px) {
+    height: 100vh;
+    position: fixed;
+    width: 250px;
+    // box-shadow: rgb(227, 227, 227) 4px 0px 8px 1px;
+    margin-bottom: 0;
+  }
+}
+
+.menu {
+  text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  &__item {
+    margin-top: 1rem;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+.social-icons {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  .icon {
+    margin: 0.75rem;
+  }
+  img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+///////////////////////////
+// ALBUMS ///////////////////////////
+///////////////////////////
+
+.albums {
+  grid-area: albums;
+  overflow: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, max-content));
+  grid-gap: 1rem;
+  justify-content: center;
+  width: 100%;
+  padding: 0 1.5rem;
+}
+
+.album {
+  text-align: left;
+  padding: 1rem;
+  max-width: 220px;
+
+  &__artist-title {
+    margin: 0.25rem 0 0;
+    color: #2b2b2b;
+  }
+
+  &__info {
+    color: #3e3e3e;
+  }
+
+  img {
+    max-width: 220px;
+    width: 220px;
+    height: auto;
+    box-shadow: lightgrey 2px 2px 10px 0;
+  }
+}
+
+///////////////////////////
+// ABOUT ///////////////////////////
+///////////////////////////
+
+.about {
+  &::before {
+    content: '';
+    background: lightgrey;
+    position: absolute;
+    top: 4rem;
+    left: 1.5rem;
+    right: 1.5rem;
+    height: 2px;
+  }
+  grid-area: about;
+  position: relative;
+  padding: 8rem 1.5rem 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+  }
+
+  &__img {
+    max-width: 100%;
+    height: auto;
+    padding: 1rem;
+  }
+
+  &__content {
+    padding: 1rem;
+    max-width: 600px;
   }
 }
