@@ -9,10 +9,16 @@ body {
 
 .App {
   display: grid;
-  grid-template-columns: 250px auto;
-  grid-template-rows: auto;
-  grid-template-areas: 'sidebar albums' 'sidebar about';
+  grid-template-columns: auto;
+  grid-template-rows: 1fr auto;
   padding: 2rem 0 6rem;
+  grid-template-areas: 'sidebar' 'albums' 'about';
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: 250px auto;
+    grid-template-rows: auto;
+    grid-template-areas: 'sidebar albums' 'sidebar about';
+  }
 }
 
 h1,
@@ -38,15 +44,25 @@ a {
   color: black;
 }
 
+///////////////////////////
+// SIDEBAR ///////////////////////////
+///////////////////////////
+
 .sidebar {
   grid-area: sidebar;
-  height: 100vh;
-  position: fixed;
-  width: 250px;
+  width: 100%;
   top: 0;
   left: 0;
   text-align: center;
-  box-shadow: rgb(227, 227, 227) 4px 0px 8px 1px;
+  margin-bottom: 4rem;
+
+  @media screen and (min-width: 768px) {
+    height: 100vh;
+    position: fixed;
+    width: 250px;
+    // box-shadow: rgb(227, 227, 227) 4px 0px 8px 1px;
+    margin-bottom: 0;
+  }
 }
 
 .menu {
@@ -64,21 +80,16 @@ a {
   justify-content: center;
   .icon {
     margin: 0.75rem;
-    // position: relative;
-    // width: 35px;
-    // height: 35px;
-    // border-radius: 100%;
-    // background: rgb(227, 227, 227);
   }
   img {
     width: 20px;
     height: 20px;
-    // position: absolute;
-    // top: 50%;
-    // left: 50%;
-    // transform: translate(-50%, -50%);
   }
 }
+
+///////////////////////////
+// ALBUMS ///////////////////////////
+///////////////////////////
 
 .albums {
   grid-area: albums;
@@ -88,6 +99,7 @@ a {
   grid-gap: 1rem;
   justify-content: center;
   width: 100%;
+  padding: 0 1.5rem;
 }
 
 .album {
@@ -112,6 +124,10 @@ a {
   }
 }
 
+///////////////////////////
+// ABOUT ///////////////////////////
+///////////////////////////
+
 .about {
   &::before {
     content: '';
@@ -124,14 +140,13 @@ a {
   }
   grid-area: about;
   position: relative;
-  padding-top: 8rem;
-  display: grid;
-  grid-gap: 1rem;
+  padding: 8rem 1.5rem 0;
+  display: flex;
   justify-content: center;
-  grid-auto-flow: row;
+  flex-direction: column;
 
-  @media screen and (min-width: 1024px) {
-    grid-auto-flow: column;
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
   }
 
   &__img {
@@ -142,5 +157,6 @@ a {
 
   &__content {
     padding: 1rem;
+    max-width: 600px;
   }
 }
