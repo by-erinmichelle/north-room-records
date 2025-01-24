@@ -18,7 +18,7 @@ const Sidebar = () => {
         </a>
 
         <div className="social-icons">
-          <a href="instagram.com">
+          <a href="https://www.instagram.com/northroomrecords/">
             <div className="icon">
               <img
                 src={process.env.PUBLIC_URL + '/assets/instagram.png'}
@@ -26,7 +26,7 @@ const Sidebar = () => {
               />
             </div>
           </a>
-          <a href="mailto:">
+          <a href="mailto:northroomrecords@gmail.com">
             <div className="icon">
               <img
                 src={process.env.PUBLIC_URL + '/assets/email.png'}
