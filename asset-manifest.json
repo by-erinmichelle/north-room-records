@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/north-room-records/static/css/main.58cf3725.css",
-    "main.js": "/north-room-records/static/js/main.119f9653.js",
+    "main.css": "/north-room-records/static/css/main.abf46623.css",
+    "main.js": "/north-room-records/static/js/main.e08853c0.js",
     "static/js/787.5b90bf58.chunk.js": "/north-room-records/static/js/787.5b90bf58.chunk.js",
     "index.html": "/north-room-records/index.html",
-    "main.58cf3725.css.map": "/north-room-records/static/css/main.58cf3725.css.map",
-    "main.119f9653.js.map": "/north-room-records/static/js/main.119f9653.js.map",
+    "main.abf46623.css.map": "/north-room-records/static/css/main.abf46623.css.map",
+    "main.e08853c0.js.map": "/north-room-records/static/js/main.e08853c0.js.map",
     "787.5b90bf58.chunk.js.map": "/north-room-records/static/js/787.5b90bf58.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.58cf3725.css",
-    "static/js/main.119f9653.js"
+    "static/css/main.abf46623.css",
+    "static/js/main.e08853c0.js"
   ]
 }
