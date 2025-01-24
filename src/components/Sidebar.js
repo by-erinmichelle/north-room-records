@@ -4,7 +4,11 @@ const Sidebar = () => {
   return (
     <header className="sidebar">
       {/* <div className="sidebar__content"> */}
-      {/* logo */} <h1>North Room Records</h1>
+      <img
+        className="logo"
+        src={process.env.PUBLIC_URL + '/assets/NRR-logo.jpeg'}
+        alt="North Room Records"
+      />
       <nav className="menu">
         <a className="menu__item" href="#discography">
           Discography
